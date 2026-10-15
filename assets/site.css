@@ -369,3 +369,5 @@ form.sent{display:none}
 
 /* own header size: the lockup is wide, so it sits shorter than the template's tall badge */
 .brand-logo{height:58px}@media(max-width:900px){.brand-logo{height:auto;max-height:38px;max-width:calc(100vw - 110px)}}
+
+.foot-lic{opacity:.7}
