@@ -371,3 +371,28 @@ form.sent{display:none}
 .brand-logo{height:58px}@media(max-width:900px){.brand-logo{height:auto;max-height:38px;max-width:calc(100vw - 110px)}}
 
 .foot-lic{opacity:.7}
+
+/* quiz popup on phones (Fritz 2026-10-25: "so big for the screen"). Seven stacked options plus the
+   header ran past the bottom of a phone, and overflow:hidden meant it could not scroll. Now it is
+   capped at the screen height, the header and options are compact, and only the body scrolls.
+   Inputs stay at 1rem so iOS does not zoom in on focus. */
+@media(max-width:600px){
+  .quiz-overlay{padding:10px}
+  .quiz-modal{display:flex;flex-direction:column;max-height:calc(100vh - 20px);max-height:calc(100dvh - 20px);border-radius:18px}
+  .quiz-head{flex:none;padding:14px 16px 12px}
+  .quiz-head .kicker{font-size:.66rem}
+  .quiz-head h3{font-size:1.08rem;margin-top:4px;padding-right:34px}
+  .quiz-head p{font-size:.8rem}
+  .quiz-prog{margin-top:10px}
+  .quiz-close{top:10px;right:10px;width:30px;height:30px}
+  .quiz-body{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 16px 16px}
+  .quiz-step h4{font-size:1rem;margin-bottom:10px}
+  .quiz-opts{gap:7px}
+  .qopt{padding:9px 11px;gap:9px;font-size:.92rem;border-radius:11px}
+  .qopt .qic{width:30px;height:30px;border-radius:8px}
+  .quiz-field{margin-top:8px}
+  .quiz-field label{margin-bottom:3px}
+  .quiz-field input,.quiz-field select{padding:10px 12px}
+  .quiz-actions{margin-top:12px}
+  .quiz-trust{margin-top:10px;font-size:.74rem}
+}
